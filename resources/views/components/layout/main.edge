@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="fr" class="{{ isDark ? 'dark' : '' }}">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ $title ?? 'KOMBOZI Prémice' }}</title>
+
+    <!-- Vite CSS -->
+    @vite(['resources/css/app.css'])
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-papNM3n1cIhLh6i4j3jD4aOcz2l3WmM1d3nJIRtD3Hg7fV7sckFZgW6Gya0iS0DRL77cHfOkK0aYkKZp0Zr+lw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Tailwind (via CDN for fallback) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+
+    <!-- Tailwind Config -->
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        dark: {
+                            300: '#1e293b',
+                            400: '#0f172a',
+                            500: '#020617',
+                        },
+                        accent: {
+                            purple: '#a855f7',
+                            pink: '#ec4899',
+                            cyan: '#06b6d4',
+                            orange: '#f97316',
+                            green: '#10b981',
+                            yellow: '#eab308',
+                            blue: '#3b82f6',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'monospace']
+                    },
+                    animation: {
+                        float: 'float 6s ease-in-out infinite',
+                        glow: 'glow 2s ease-in-out infinite alternate',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Custom Styles -->
+    <style>
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+
+        @keyframes glow {
+            from {
+                opacity: 0.5;
+                transform: scale(1);
+            }
+
+            to {
+                opacity: 1;
+                transform: scale(1.1);
+            }
+        }
+
+        .line-clamp-3 {
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: white;
+        }
+
+        .dark body {
+            background-color: #020617;
+        }
+    </style>
+</head>
+
+<body class="bg-white dark:bg-dark-500 text-gray-800 dark:text-gray-200 transition-colors duration-300 font-sans">
+    <!-- Navigation -->
+    @!component('components/navbar')
+
+    <!-- Contenu principal -->
+    <main>
+        {{{ await $slots.main() }}}
+    </main>
+
+    <!-- Footer -->
+    @!component('components/footer')
+
+    <script src="/resources/js/app.js"></script>
+</body>
+
+</html>
