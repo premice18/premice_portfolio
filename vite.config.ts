@@ -16,4 +16,8 @@ export default defineConfig({
       reload: ['resources/views/**/*.edge'],
     }),
   ],
+  // Ajoutez l'option 'server' en dehors du plugin AdonisJS
+  server: {
+    allowedHosts: ['premice-portfolio.onrender.com'],
+  },
 })
