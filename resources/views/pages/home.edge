@@ -193,7 +193,7 @@
 
         <!-- Image du projet (format portrait aussi) -->
         <div class="h-80 bg-gray-100 dark:bg-dark-400 flex items-center justify-center overflow-hidden">
-          <img src="/resources/views/images/PBTech_image.png" alt="Aperçu du projet Clone X"
+          <img src="/resources/views/images/cloneX_image.png" alt="Aperçu du projet Clone X"
             class="h-full object-contain transition-transform duration-300 hover:scale-105 rounded-md">
         </div>
 
@@ -207,7 +207,8 @@
             <span class="px-3 py-1 bg-gray-100 dark:bg-dark-400 rounded-full text-sm">AdonisJS</span>
             <span class="px-3 py-1 bg-gray-100 dark:bg-dark-400 rounded-full text-sm">PostgreSQL</span>
           </div>
-          <a href="#" class="text-accent-purple hover:text-purple-600 font-medium transition-colors duration-200">
+          <a href="https://https://clone-x-premice.onrender.com/"
+            class="text-accent-purple hover:text-purple-600 font-medium transition-colors duration-200">
             Voir le projet →
           </a>
         </div>
@@ -300,24 +301,24 @@
 <section id="contact" class="py-20">
   <div class="container mx-auto px-6 max-w-4xl">
     <h2 class="text-4xl font-bold text-center mb-12">Travaillons Ensemble</h2>
-    <form action="mailto:premicek18@gmail.com" method="POST" enctype="text/plain" class="space-y-6">
+    <form id="contactForm" method="POST" enctype="text/plain" class="space-y-6">
 
       <div class="grid md:grid-cols-2 gap-6">
         <div>
           <label class="block text-sm font-medium mb-2">Nom</label>
-          <input type="text" name="Nom" required
+          <input type="text" id="name" name="Nom" required
             class="w-full px-4 py-3 rounded-lg bg-white dark:bg-dark-300 border border-gray-300 dark:border-dark-200 focus:outline-none focus:ring-2 focus:ring-accent-purple transition-colors duration-200">
         </div>
         <div>
           <label class="block text-sm font-medium mb-2">Email</label>
-          <input type="email" name="Email" required
+          <input type="email" id="email" name="Email" required
             class="w-full px-4 py-3 rounded-lg bg-white dark:bg-dark-300 border border-gray-300 dark:border-dark-200 focus:outline-none focus:ring-2 focus:ring-accent-purple transition-colors duration-200">
         </div>
       </div>
 
       <div>
         <label class="block text-sm font-medium mb-2">Message</label>
-        <textarea name="Message" rows="6" required
+        <textarea name="Message" id="message" rows="6" required
           class="w-full px-4 py-3 rounded-lg bg-white dark:bg-dark-300 border border-gray-300 dark:border-dark-200 focus:outline-none focus:ring-2 focus:ring-accent-purple transition-colors duration-200"></textarea>
       </div>
 
@@ -328,6 +329,20 @@
     </form>
   </div>
 </section>
+<script>
+  document.getElementById('contactForm').addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const message = document.getElementById('message').value;
+
+    const subject = `Nouveau message de ${name}`;
+    const body = `Nom: ${name}%0D%0AEmail: ${email}%0D%0A%0D%0AMessage:%0D%0A${message}`;
+
+    window.location.href = `mailto:premicek18@gmail.com?subject=${subject}&body=${body}`;
+  });
+</script>
 
 @endslot
 @end
