@@ -1,61 +1,99 @@
-<nav
-    class="fixed top-0 w-full bg-white/80 dark:bg-dark-500/80 backdrop-blur-md z-50 border-b border-gray-200 dark:border-dark-300">
-    <div class="container mx-auto px-6 py-4">
+<nav class="fixed top-0 w-full bg-white/80 dark:bg-dark-500/80 z-50 border-b border-gray-200 dark:border-dark-300"
+    style="backdrop-filter: blur(12px) !important; -webkit-backdrop-filter: blur(12px) !important;">
+    <div class="container mx-auto px-6 py-3">
         <div class="flex justify-between items-center">
             <!-- Logo -->
             <a href="/"
-                class="text-2xl font-bold bg-gradient-to-r from-accent-purple to-accent-pink bg-clip-text text-transparent">
+                class="text-xl md:text-2xl font-bold bg-gradient-to-r from-accent-purple to-accent-pink bg-clip-text text-transparent hover:scale-105 transition-transform duration-200">
                 KOMBOZI Prémice
             </a>
 
             <!-- Navigation Desktop -->
-            <div class="hidden md:flex space-x-8">
-                <a href="#accueil" class="hover:text-accent-purple transition-colors duration-200">Accueil</a>
-                <a href="#projets" class="hover:text-accent-purple transition-colors duration-200">Projets</a>
-                <a href="#competences" class="hover:text-accent-purple transition-colors duration-200">Compétences</a>
-                <a href="#" class="hover:text-accent-purple transition-colors duration-200">Blog</a>
-                <a href="#contact" class="hover:text-accent-purple transition-colors duration-200">Contact</a>
+            <div class="hidden md:flex space-x-6 lg:space-x-8 items-center">
+                <a href="#accueil" class="group relative py-2 hover:text-accent-purple transition-colors duration-200">
+                    <span>Accueil</span>
+                    <span
+                        class="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-accent-purple to-accent-pink group-hover:w-full transition-all duration-300"></span>
+                </a>
+                <a href="#projets" class="group relative py-2 hover:text-accent-purple transition-colors duration-200">
+                    <span>Projets</span>
+                    <span
+                        class="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-accent-purple to-accent-pink group-hover:w-full transition-all duration-300"></span>
+                </a>
+                <a href="#competences"
+                    class="group relative py-2 hover:text-accent-purple transition-colors duration-200">
+                    <span>Compétences</span>
+                    <span
+                        class="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-accent-purple to-accent-pink group-hover:w-full transition-all duration-300"></span>
+                </a>
+                <a href="#" class="group relative py-2 hover:text-accent-purple transition-colors duration-200">
+                    <span>Blog</span>
+                    <span
+                        class="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-accent-purple to-accent-pink group-hover:w-full transition-all duration-300"></span>
+                </a>
+
+                <!-- Bouton Contact plus visible -->
+                <a href="#contact"
+                    class="bg-gradient-to-r from-accent-purple to-accent-pink text-white px-4 py-2 rounded-lg hover:shadow-lg transform hover:scale-105 transition-all duration-300 font-medium">
+                    Contact
+                </a>
             </div>
 
-            <!-- Bouton thème sombre -->
-            <button id="themeToggle"
-                class="p-2 rounded-lg bg-gray-100 dark:bg-dark-400 hover:bg-gray-200 dark:hover:bg-dark-300 transition-all duration-300 flex items-center justify-center shadow-sm hover:shadow-md"
-                aria-label="Basculer le thème">
+            <!-- Côté droit : Thème + Menu mobile -->
+            <div class="flex items-center space-x-4">
+                <!-- Bouton thème -->
+                <button id="themeToggle"
+                    class="p-2 rounded-lg bg-gray-100 dark:bg-dark-400 hover:bg-gray-200 dark:hover:bg-dark-300 transition-all duration-300 shadow-sm hover:shadow-md transform hover:scale-110 flex items-center justify-center"
+                    aria-label="Basculer le thème">
 
-                <!-- Icône Lune (mode clair) -->
-                <span class="dark:hidden">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
-                        class="w-6 h-6 fill-current text-gray-700">
-                        <path d="M21.75 15.5a9.75 9.75 0 0 1-12.25-12 9.75 9.75 0 1 0 12.25 12z" />
+                    <!-- Icône Lune (mode clair) -->
+                    <span class="dark:hidden">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                            class="w-5 h-5 fill-current text-gray-700">
+                            <path d="M21.75 15.5a9.75 9.75 0 0 1-12.25-12 9.75 9.75 0 1 0 12.25 12z" />
+                        </svg>
+                    </span>
+
+                    <!-- Icône Soleil (mode sombre) -->
+                    <span class="hidden dark:inline">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                            class="w-5 h-5 fill-current text-yellow-400">
+                            <path
+                                d="M12 4.5a1 1 0 0 1 1 1V7a1 1 0 0 1-2 0V5.5a1 1 0 0 1 1-1zm0 13a1 1 0 0 1 1 1V19a1 1 0 0 1-2 0v-.5a1 1 0 0 1 1-1zm7.5-5.5a1 1 0 0 1 1 1h1.5a1 1 0 0 1 0 2H20.5a1 1 0 0 1-1-1 1 1 0 0 1 1-1zm-15 0a1 1 0 0 1 1 1H3a1 1 0 0 1 0-2h1.5a1 1 0 0 1 1 1zm11.61 6.11a1 1 0 0 1 1.41 0l1.06 1.06a1 1 0 1 1-1.41 1.41l-1.06-1.06a1 1 0 0 1 0-1.41zM6.89 6.89a1 1 0 0 1 1.41 0L9.36 8a1 1 0 0 1-1.41 1.41L6.89 8.3a1 1 0 0 1 0-1.41zm0 10.22a1 1 0 0 1 0 1.41L5.83 19.58a1 1 0 0 1-1.41-1.41l1.06-1.06a1 1 0 0 1 1.41 0zm10.22-10.22a1 1 0 0 1 0 1.41L16.05 9.36a1 1 0 0 1-1.41-1.41l1.06-1.06a1 1 0 0 1 1.41 0zM12 8a4 4 0 1 1 0 8 4 4 0 0 1 0-8z" />
+                        </svg>
+                    </span>
+                </button>
+
+                <!-- Menu Mobile - CORRIGÉ -->
+                <button id="mobileMenuButton"
+                    class="md:hidden p-2 hover:bg-gray-100 dark:hover:bg-dark-400 rounded-lg transition-colors duration-200">
+                    <svg class="w-6 h-6 text-gray-700 dark:text-gray-300" fill="none" stroke="currentColor"
+                        viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16">
+                        </path>
                     </svg>
-                </span>
-
-                <!-- Icône Soleil (mode sombre) -->
-                <span class="hidden dark:inline">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
-                        class="w-6 h-6 fill-current text-yellow-400">
-                        <path
-                            d="M12 4.5a1 1 0 0 1 1 1V7a1 1 0 0 1-2 0V5.5a1 1 0 0 1 1-1zm0 13a1 1 0 0 1 1 1V19a1 1 0 0 1-2 0v-.5a1 1 0 0 1 1-1zm7.5-5.5a1 1 0 0 1 1 1h1.5a1 1 0 0 1 0 2H20.5a1 1 0 0 1-1-1 1 1 0 0 1 1-1zm-15 0a1 1 0 0 1 1 1H3a1 1 0 0 1 0-2h1.5a1 1 0 0 1 1 1zm11.61 6.11a1 1 0 0 1 1.41 0l1.06 1.06a1 1 0 1 1-1.41 1.41l-1.06-1.06a1 1 0 0 1 0-1.41zM6.89 6.89a1 1 0 0 1 1.41 0L9.36 8a1 1 0 0 1-1.41 1.41L6.89 8.3a1 1 0 0 1 0-1.41zm0 10.22a1 1 0 0 1 0 1.41L5.83 19.58a1 1 0 0 1-1.41-1.41l1.06-1.06a1 1 0 0 1 1.41 0zm10.22-10.22a1 1 0 0 1 0 1.41L16.05 9.36a1 1 0 0 1-1.41-1.41l1.06-1.06a1 1 0 0 1 1.41 0zM12 8a4 4 0 1 1 0 8 4 4 0 0 1 0-8z" />
-                    </svg>
-                </span>
-            </button>
-
-            <!-- Menu Mobile -->
-            <button id="mobileMenuButton" class="md:hidden p-2">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16">
-                    </path>
-                </svg>
-            </button>
+                </button>
+            </div>
         </div>
 
         <!-- Menu Mobile -->
-        <div id="mobileMenu" class="hidden md:hidden mt-4 space-y-4">
-            <a href="#accueil" class="block hover:text-accent-purple transition-colors duration-200">Accueil</a>
-            <a href="#projets" class="block hover:text-accent-purple transition-colors duration-200">Projets</a>
-            <a href="#competences" class="block hover:text-accent-purple transition-colors duration-200">Compétences</a>
-            <a href="#" class="block hover:text-accent-purple transition-colors duration-200">Blog</a>
-            <a href="#contact" class="block hover:text-accent-purple transition-colors duration-200">Contact</a>
+        <div id="mobileMenu" class="hidden md:hidden mt-4 space-y-3 py-4 border-t border-gray-200 dark:border-dark-300">
+            <a href="#accueil"
+                class="block py-2 hover:text-accent-purple transition-colors duration-200 hover:bg-gray-50 dark:hover:bg-dark-400 rounded-lg px-3">🏠
+                Accueil</a>
+            <a href="#projets"
+                class="block py-2 hover:text-accent-purple transition-colors duration-200 hover:bg-gray-50 dark:hover:bg-dark-400 rounded-lg px-3">💼
+                Projets</a>
+            <a href="#competences"
+                class="block py-2 hover:text-accent-purple transition-colors duration-200 hover:bg-gray-50 dark:hover:bg-dark-400 rounded-lg px-3">🚀
+                Compétences</a>
+            <a href="#"
+                class="block py-2 hover:text-accent-purple transition-colors duration-200 hover:bg-gray-50 dark:hover:bg-dark-400 rounded-lg px-3">✍️
+                Blog</a>
+            <a href="#contact"
+                class="block py-2 bg-gradient-to-r from-accent-purple to-accent-pink text-white rounded-lg px-3 text-center font-medium mt-2">📞
+                Contact</a>
         </div>
     </div>
 </nav>

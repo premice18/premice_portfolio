@@ -160,61 +160,138 @@
 
     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
 
-      <!-- Carte Projet 1 -->
+      <!-- Carte Projet 1 - PBTech -->
       <div
-        class="bg-white dark:bg-dark-300 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+        class="bg-white dark:bg-dark-300 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 relative">
 
-        <!-- Image du projet (format portrait) -->
-        <div class="h-80 bg-gray-100 dark:bg-dark-400 flex items-center justify-center overflow-hidden">
+        <!-- Badge "Live" -->
+        <div class="absolute top-4 right-4 z-10">
+          <span class="px-3 py-1 bg-green-500 text-white rounded-full text-sm font-bold animate-pulse">
+            🚀 En Ligne !
+          </span>
+        </div>
+
+        <!-- Image du projet -->
+        <div
+          class="h-80 bg-gradient-to-br from-blue-100 to-cyan-100 dark:from-blue-900 dark:to-cyan-900 flex items-center justify-center overflow-hidden relative group">
+          <div
+            class="absolute inset-0 bg-black bg-opacity-10 group-hover:bg-opacity-5 transition-all duration-300 rounded-md">
+          </div>
           <img src="/resources/views/images/PBTech_image.png" alt="Aperçu du projet PBTech"
-            class="h-full object-contain transition-transform duration-300 hover:scale-105 rounded-md">
+            class="h-full object-contain transition-transform duration-300 group-hover:scale-110 rounded-md">
+
+          <!-- Effet de brillance au survol -->
+          <div
+            class="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -skew-x-12 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000">
+          </div>
         </div>
 
         <!-- Contenu -->
         <div class="p-6">
-          <h3 class="text-xl font-bold mb-2">PBTech</h3>
+          <h3 class="text-xl font-bold mb-2 flex items-center gap-2">
+            PBTech
+            <span class="text-lg">📱</span>
+          </h3>
           <p class="text-gray-600 dark:text-gray-300 mb-4">
-            Plateforme de réparation et de vente d'accessoires téléphoniques, développée avec AdonisJS.
+            Plateforme complète de réparation et vente d'accessoires téléphoniques.
           </p>
-          <div class="flex flex-wrap gap-2 mb-4">
-            <span class="px-3 py-1 bg-gray-100 dark:bg-dark-400 rounded-full text-sm">AdonisJS</span>
-            <span class="px-3 py-1 bg-gray-100 dark:bg-dark-400 rounded-full text-sm">PostgreSQL</span>
+
+          <div class="mb-3">
+            <p class="text-sm text-blue-600 dark:text-blue-400 italic">
+              💼 Des téléphones heureux, des clients satisfaits !
+            </p>
           </div>
-          <a href="https://pbtech-site-vitrine.onrender.com/" target="_blank" rel="noopener noreferrer"
-            class="text-accent-purple hover:text-purple-600 font-medium transition-colors duration-200">
-            Voir le projet →
-          </a>
+
+          <div class="flex flex-wrap gap-2 mb-4">
+            <span
+              class="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full text-sm">AdonisJS</span>
+            <span
+              class="px-3 py-1 bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 rounded-full text-sm">PostgreSQL</span>
+            <span
+              class="px-3 py-1 bg-cyan-100 dark:bg-cyan-900 text-cyan-800 dark:text-cyan-200 rounded-full text-sm">E-commerce</span>
+          </div>
+
+          <div class="flex gap-3">
+            <a href="https://pbtech-site-vitrine.onrender.com/" target="_blank" rel="noopener noreferrer"
+              class="flex-1 text-center px-4 py-2 bg-accent-purple text-white rounded-lg hover:bg-purple-600 font-medium transition-colors duration-200 text-sm">
+              🌐 Voir le Site
+            </a>
+            <a href="#"
+              class="flex-1 text-center px-4 py-2 border border-accent-purple text-accent-purple rounded-lg hover:bg-purple-50 dark:hover:bg-purple-900/20 font-medium transition-colors duration-200 text-sm"
+              onclick="event.preventDefault(); alert('Code source disponible sur demande ! 🔐');">
+              📁 Code Source
+            </a>
+          </div>
         </div>
       </div>
 
-      <!-- Carte Projet 2 -->
+      <!-- Carte Projet 2 - Clone X -->
       <div
-        class="bg-white dark:bg-dark-300 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+        class="bg-white dark:bg-dark-300 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 relative">
 
-        <!-- Image du projet (format portrait aussi) -->
-        <div class="h-80 bg-gray-100 dark:bg-dark-400 flex items-center justify-center overflow-hidden">
+        <!-- Badge "Live" -->
+        <div class="absolute top-4 right-4 z-10">
+          <span class="px-3 py-1 bg-green-500 text-white rounded-full text-sm font-bold animate-pulse">
+            🚀 En Ligne !
+          </span>
+        </div>
+
+        <!-- Image du projet -->
+        <div
+          class="h-80 bg-gradient-to-br from-gray-100 to-blue-100 dark:from-gray-900 dark:to-blue-900 flex items-center justify-center overflow-hidden relative group">
+          <div
+            class="absolute inset-0 bg-black bg-opacity-10 group-hover:bg-opacity-5 transition-all duration-300 rounded-md">
+          </div>
           <img src="/resources/views/images/cloneX_image.png" alt="Aperçu du projet Clone X"
-            class="h-full object-contain transition-transform duration-300 hover:scale-105 rounded-md">
+            class="h-full object-contain transition-transform duration-300 group-hover:scale-110 rounded-md">
+
+          <!-- Effet de brillance au survol -->
+          <div
+            class="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -skew-x-12 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000">
+          </div>
         </div>
 
         <!-- Contenu -->
         <div class="p-6">
-          <h3 class="text-xl font-bold mb-2">Clone X</h3>
+          <h3 class="text-xl font-bold mb-2 flex items-center gap-2">
+            Clone X
+            <span class="text-lg">🐦</span>
+          </h3>
           <p class="text-gray-600 dark:text-gray-300 mb-4">
-            Clone du réseau social X, réalisé avec AdonisJS et PostgreSQL.
+            Reproduction fonctionnelle du réseau social X avec toutes les features essentielles.
           </p>
-          <div class="flex flex-wrap gap-2 mb-4">
-            <span class="px-3 py-1 bg-gray-100 dark:bg-dark-400 rounded-full text-sm">AdonisJS</span>
-            <span class="px-3 py-1 bg-gray-100 dark:bg-dark-400 rounded-full text-sm">PostgreSQL</span>
+
+          <div class="mb-3">
+            <p class="text-sm text-blue-600 dark:text-blue-400 italic">
+              💬 Likez, tweetez, partagez ! L'expérience complète.
+            </p>
           </div>
-          <a href="https://clone-x-premice.onrender.com"
-            class="text-accent-purple hover:text-purple-600 font-medium transition-colors duration-200" target="_blank">
-            Voir le projet →
-          </a>
+
+          <div class="flex flex-wrap gap-2 mb-4">
+            <span
+              class="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full text-sm">AdonisJS</span>
+            <span
+              class="px-3 py-1 bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 rounded-full text-sm">PostgreSQL</span>
+            <span
+              class="px-3 py-1 bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-200 rounded-full text-sm">Réseau
+              Social</span>
+          </div>
+
+          <div class="flex gap-3">
+            <a href="https://clone-x-premice.onrender.com" target="_blank"
+              class="flex-1 text-center px-4 py-2 bg-accent-purple text-white rounded-lg hover:bg-purple-600 font-medium transition-colors duration-200 text-sm">
+              🌐 Voir le Site
+            </a>
+            <a href="#"
+              class="flex-1 text-center px-4 py-2 border border-accent-purple text-accent-purple rounded-lg hover:bg-purple-50 dark:hover:bg-purple-900/20 font-medium transition-colors duration-200 text-sm"
+              onclick="event.preventDefault(); alert('Code source disponible sur demande ! 🔐');">
+              📁 Code Source
+            </a>
+          </div>
         </div>
       </div>
 
-      <!-- Carte Projet 3 -->
+      <!-- Carte Projet 3 - Wedding App -->
       <div
         class="bg-white dark:bg-dark-300 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 relative">
 
@@ -225,35 +302,136 @@
           </span>
         </div>
 
-        <!-- Image du projet avec overlay -->
-        <div class="h-80 bg-gray-100 dark:bg-dark-400 flex items-center justify-center overflow-hidden relative">
-          <div class="absolute inset-0 bg-black bg-opacity-20 z-5 rounded-md"></div>
+        <!-- Image du projet -->
+        <div
+          class="h-80 bg-gradient-to-br from-pink-100 to-red-100 dark:from-pink-900 dark:to-red-900 flex items-center justify-center overflow-hidden relative group">
+          <div
+            class="absolute inset-0 bg-black bg-opacity-20 group-hover:bg-opacity-10 transition-all duration-300 rounded-md">
+          </div>
           <img src="/resources/views/images/wedding-app-image.png" alt="Aperçu du projet Wedding App"
-            class="h-full object-contain transition-transform duration-300 hover:scale-105 rounded-md">
+            class="h-full object-contain transition-transform duration-300 group-hover:scale-110 rounded-md">
+
+          <!-- Effet de brillance au survol -->
+          <div
+            class="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -skew-x-12 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000">
+          </div>
         </div>
 
         <!-- Contenu -->
         <div class="p-6">
-          <h3 class="text-xl font-bold mb-2">Wedding App</h3>
+          <h3 class="text-xl font-bold mb-2 flex items-center gap-2">
+            Wedding App
+            <span class="text-lg">💍</span>
+          </h3>
           <p class="text-gray-600 dark:text-gray-300 mb-4">
-            Plateforme de gestion d'invitations de mariage
+            Plateforme de gestion d'invitations de mariage moderne et élégante.
           </p>
+
           <div class="mb-3">
-            <p class="text-sm text-yellow-600 dark:text-yellow-400 italic">
+            <p class="text-sm text-pink-600 dark:text-pink-400 italic">
               ⚡ En plein code ! Les mariés attendent patiemment...
             </p>
           </div>
+
           <div class="flex flex-wrap gap-2 mb-4">
-            <span class="px-3 py-1 bg-gray-100 dark:bg-dark-400 rounded-full text-sm">AdonisJS</span>
-            <span class="px-3 py-1 bg-gray-100 dark:bg-dark-400 rounded-full text-sm">PostgreSQL</span>
-            <span class="px-3 py-1 bg-yellow-100 dark:bg-yellow-900 rounded-full text-sm">En développement</span>
+            <span
+              class="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full text-sm">AdonisJS</span>
+            <span
+              class="px-3 py-1 bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 rounded-full text-sm">PostgreSQL</span>
+            <span
+              class="px-3 py-1 bg-pink-100 dark:bg-pink-900 text-pink-800 dark:text-pink-200 rounded-full text-sm">Gestion
+              d'événements</span>
           </div>
-          <a href="https://github.com/premice18/wedding-invites-app-adonisJS"
-            class="text-accent-purple hover:text-purple-600 font-medium transition-colors duration-200" target="_blank">
-            Voir l'avancée sur GitHub →
-          </a>
+
+          <div class="flex gap-3">
+            <a href="https://github.com/premice18/wedding-invites-app-adonisJS" target="_blank"
+              class="flex-1 text-center px-4 py-2 bg-accent-purple text-white rounded-lg hover:bg-purple-600 font-medium transition-colors duration-200 text-sm">
+              📁 Code Source
+            </a>
+            <a href="#"
+              class="flex-1 text-center px-4 py-2 border border-accent-purple text-accent-purple rounded-lg hover:bg-purple-50 dark:hover:bg-purple-900/20 font-medium transition-colors duration-200 text-sm"
+              onclick="event.preventDefault(); alert('Bientôt disponible ! Les mariages se préparent... 💒');">
+              🌐 Preview
+            </a>
+          </div>
         </div>
       </div>
+
+      <!-- Carte Projet 4 - Blog du Passionné -->
+      <div
+        class="bg-white dark:bg-dark-300 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 relative">
+
+        <!-- Badge "Nouveau" -->
+        <div class="absolute top-4 right-4 z-10">
+          <span
+            class="px-3 py-1 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-full text-sm font-bold animate-pulse">
+            ✨ Nouveau !
+          </span>
+        </div>
+
+        <!-- Badge "En développement" -->
+        <div class="absolute top-4 left-4 z-10">
+          <span class="px-3 py-1 bg-yellow-400 text-gray-900 rounded-full text-sm font-bold animate-pulse">
+            🚧 En construction
+          </span>
+        </div>
+
+        <!-- Image du projet -->
+        <div
+          class="h-80 bg-gradient-to-br from-purple-100 to-pink-100 dark:from-purple-900 dark:to-pink-900 flex items-center justify-center overflow-hidden relative group">
+          <div
+            class="absolute inset-0 bg-black bg-opacity-10 group-hover:bg-opacity-5 transition-all duration-300 rounded-md">
+          </div>
+          <img src="/resources/views/images/bdp-image.png" alt="Aperçu du projet Blog du Passionné"
+            class="h-full object-contain transition-transform duration-300 group-hover:scale-110 rounded-md">
+
+          <!-- Effet de brillance au survol -->
+          <div
+            class="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -skew-x-12 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000">
+          </div>
+        </div>
+
+        <!-- Contenu -->
+        <div class="p-6">
+          <h3 class="text-xl font-bold mb-2 flex items-center gap-2">
+            Blog du Passionné
+            <span class="text-lg">✍️</span>
+          </h3>
+          <p class="text-gray-600 dark:text-gray-300 mb-4">
+            Mon espace d'écriture où je partage mes découvertes tech et réflexions de développeur.
+          </p>
+
+          <div class="mb-3">
+            <p class="text-sm text-purple-600 dark:text-purple-400 italic">
+              🧠 Mon cerveau en code ! Les idées bouillonnent...
+            </p>
+          </div>
+
+          <div class="flex flex-wrap gap-2 mb-4">
+            <span
+              class="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full text-sm">AdonisJS</span>
+            <span
+              class="px-3 py-1 bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 rounded-full text-sm">PostgreSQL</span>
+            <span
+              class="px-3 py-1 bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-200 rounded-full text-sm">TailwindCSS</span>
+            <span
+              class="px-3 py-1 bg-pink-100 dark:bg-pink-900 text-pink-800 dark:text-pink-200 rounded-full text-sm">Full-Stack</span>
+          </div>
+
+          <div class="flex gap-3">
+            <a href="https://github.com/premice18/blog_du_passionn-_BDP" target="_blank"
+              class="flex-1 text-center px-4 py-2 bg-accent-purple text-white rounded-lg hover:bg-purple-600 font-medium transition-colors duration-200 text-sm">
+              📁 Code Source
+            </a>
+            <a href="#"
+              class="flex-1 text-center px-4 py-2 border border-accent-purple text-accent-purple rounded-lg hover:bg-purple-50 dark:hover:bg-purple-900/20 font-medium transition-colors duration-200 text-sm"
+              onclick="event.preventDefault(); alert('Bientôt disponible ! 🚀');">
+              🌐 Preview
+            </a>
+          </div>
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
@@ -338,51 +516,213 @@
 </section>
 
 <!-- Section Contact -->
-<section id="contact" class="py-20">
+<section id="contact" class="py-20 bg-gray-50 dark:bg-dark-400">
   <div class="container mx-auto px-6 max-w-4xl">
-    <h2 class="text-4xl font-bold text-center mb-12">Travaillons Ensemble</h2>
-    <form id="contactForm" method="POST" enctype="text/plain" class="space-y-6">
+    <h2 class="text-4xl font-bold text-center mb-4">Travaillons Ensemble ✨</h2>
+    <p class="text-center text-gray-600 dark:text-gray-300 mb-12 max-w-2xl mx-auto">
+      Une idée de projet ? Une question ? Envoyez-moi un message et je vous réponds rapidement !
+    </p>
+
+    <!-- Formulaire Email élégant -->
+    <form id="contactForm"
+      class="space-y-6 bg-white dark:bg-dark-300 p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300">
+
+      <!-- En-tête visuelle -->
+      <div class="text-center mb-2">
+        <div
+          class="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4">
+          <svg class="w-8 h-8 text-white" viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L5.455 4.64 12 9.548l6.545-4.91 1.528-1.145C21.69 2.28 24 3.434 24 5.457z" />
+          </svg>
+        </div>
+        <h3 class="text-xl font-semibold">Envoyez-moi un message</h3>
+        <p class="text-sm text-gray-500 dark:text-gray-400 mt-1">Je vous réponds sous 24h</p>
+      </div>
 
       <div class="grid md:grid-cols-2 gap-6">
-        <div>
-          <label class="block text-sm font-medium mb-2">Nom</label>
-          <input type="text" id="name" name="Nom" required
-            class="w-full px-4 py-3 rounded-lg bg-white dark:bg-dark-300 border border-gray-300 dark:border-dark-200 focus:outline-none focus:ring-2 focus:ring-accent-purple transition-colors duration-200">
+        <div class="space-y-2">
+          <label for="name" class="block text-sm font-medium">Votre nom *</label>
+          <input type="text" id="name" name="name" required
+            class="w-full px-4 py-3 rounded-lg bg-white dark:bg-dark-400 border border-gray-300 dark:border-dark-200 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-200 placeholder-gray-400"
+            placeholder="John Doe">
         </div>
-        <div>
-          <label class="block text-sm font-medium mb-2">Email</label>
-          <input type="email" id="email" name="Email" required
-            class="w-full px-4 py-3 rounded-lg bg-white dark:bg-dark-300 border border-gray-300 dark:border-dark-200 focus:outline-none focus:ring-2 focus:ring-accent-purple transition-colors duration-200">
+        <div class="space-y-2">
+          <label for="email" class="block text-sm font-medium">Votre email *</label>
+          <input type="email" id="email" name="email" required
+            class="w-full px-4 py-3 rounded-lg bg-white dark:bg-dark-400 border border-gray-300 dark:border-dark-200 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-200 placeholder-gray-400"
+            placeholder="john@exemple.com">
         </div>
       </div>
 
-      <div>
-        <label class="block text-sm font-medium mb-2">Message</label>
-        <textarea name="Message" id="message" rows="6" required
-          class="w-full px-4 py-3 rounded-lg bg-white dark:bg-dark-300 border border-gray-300 dark:border-dark-200 focus:outline-none focus:ring-2 focus:ring-accent-purple transition-colors duration-200"></textarea>
+      <div class="space-y-2">
+        <label for="subject" class="block text-sm font-medium">Sujet du message *</label>
+        <select id="subject" name="subject" required
+          class="w-full px-4 py-3 rounded-lg bg-white dark:bg-dark-400 border border-gray-300 dark:border-dark-200 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-200 appearance-none cursor-pointer">
+          <option value="" disabled selected>Choisissez le sujet</option>
+          <option value="🚀 Projet de développement">🚀 Projet de développement</option>
+          <option value="🤝 Proposition de collaboration">🤝 Proposition de collaboration</option>
+          <option value="❔ Question technique">❔ Question technique</option>
+          <option value="💬 Autre">💬 Autre</option>
+        </select>
+      </div>
+
+      <div class="space-y-2">
+        <label for="message" class="block text-sm font-medium">Votre message *</label>
+        <textarea id="message" name="message" rows="5" required
+          class="w-full px-4 py-3 rounded-lg bg-white dark:bg-dark-400 border border-gray-300 dark:border-dark-200 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-200 resize-none placeholder-gray-400"
+          placeholder="Décrivez votre projet, vos besoins ou posez-moi votre question..."></textarea>
       </div>
 
       <button type="submit"
-        class="w-full bg-accent-purple hover:bg-purple-600 text-white py-3 rounded-lg font-medium transition-colors duration-200">
-        Envoyer le message
+        class="w-full bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white py-4 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg flex items-center justify-center gap-3 group">
+        <span class="group-hover:scale-110 transition-transform duration-300">📨</span>
+        <span>Envoyer le message</span>
       </button>
+
+      <div class="text-center pt-4 border-t border-gray-200 dark:border-gray-600">
+        <p class="text-sm text-gray-500 dark:text-gray-400 flex items-center justify-center gap-2">
+          <span>🔒</span>
+          Sécurisé - Votre message part directement vers ma boîte mail
+        </p>
+      </div>
     </form>
+
+    <!-- Info de contact alternative -->
+    <div class="text-center mt-8">
+      <p class="text-gray-600 dark:text-gray-300">
+        Ou contactez-moi directement à
+        <a href="mailto:premicek18@gmail.com"
+          class="text-purple-500 hover:text-purple-600 font-medium underline transition-colors">
+          premicek18@gmail.com
+        </a>
+      </p>
+    </div>
   </div>
 </section>
+
 <script>
   document.getElementById('contactForm').addEventListener('submit', function (e) {
     e.preventDefault();
 
-    const name = document.getElementById('name').value;
-    const email = document.getElementById('email').value;
-    const message = document.getElementById('message').value;
+    // Récupération des valeurs
+    const name = document.getElementById('name').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const subject = document.getElementById('subject').value;
+    const message = document.getElementById('message').value.trim();
 
-    const subject = `Nouveau message de ${name}`;
-    const body = `Nom: ${name}%0D%0AEmail: ${email}%0D%0A%0D%0AMessage:%0D%0A${message}`;
+    // Validation
+    if (!name || !email || !subject || !message) {
+      showNotification('⚠️ Veuillez remplir tous les champs obligatoires.', 'error');
+      return;
+    }
 
-    window.location.href = `mailto:premicek18@gmail.com?subject=${subject}&body=${body}`;
+    if (!isValidEmail(email)) {
+      showNotification('📧 Veuillez entrer une adresse email valide.', 'error');
+      return;
+    }
+
+    // Animation du bouton
+    const button = this.querySelector('button');
+    const originalText = button.innerHTML;
+    button.innerHTML = '🔄 Préparation du message...';
+    button.disabled = true;
+
+    // Préparation du mail
+    setTimeout(() => {
+      const encodedSubject = encodeURIComponent(`${subject} - Message de ${name}`);
+      const encodedBody = encodeURIComponent(`
+Bonjour Prémice,
+
+${message}
+
+---
+Cordialement,
+${name}
+${email}
+      `.trim());
+
+      // Ouverture du client mail
+      window.location.href = `mailto:premicek18@gmail.com?subject=${encodedSubject}&body=${encodedBody}`;
+
+      // Reset et confirmation
+      setTimeout(() => {
+        this.reset();
+        button.innerHTML = originalText;
+        button.disabled = false;
+        showNotification('✅ Message préparé ! Complétez l\'envoi depuis votre client email.', 'success');
+      }, 1000);
+
+    }, 1500);
+  });
+
+  function isValidEmail(email) {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+  }
+
+  function showNotification(message, type) {
+    // Création de la notification
+    const notification = document.createElement('div');
+    notification.className = `fixed top-4 right-4 z-50 px-6 py-4 rounded-lg shadow-xl transform transition-all duration-300 ${type === 'error' ? 'bg-red-500 text-white' : 'bg-green-500 text-white'
+      }`;
+    notification.textContent = message;
+
+    document.body.appendChild(notification);
+
+    // Animation d'entrée
+    setTimeout(() => {
+      notification.classList.add('translate-x-0', 'opacity-100');
+    }, 10);
+
+    // Suppression après 4 secondes
+    setTimeout(() => {
+      notification.classList.remove('translate-x-0', 'opacity-100');
+      setTimeout(() => {
+        document.body.removeChild(notification);
+      }, 300);
+    }, 4000);
+  }
+
+  // Animation d'entrée des champs
+  document.addEventListener('DOMContentLoaded', function () {
+    const formElements = document.querySelectorAll('#contactForm input, #contactForm select, #contactForm textarea');
+    formElements.forEach((element, index) => {
+      element.style.opacity = '0';
+      element.style.transform = 'translateY(20px)';
+
+      setTimeout(() => {
+        element.style.transition = 'all 0.5s ease';
+        element.style.opacity = '1';
+        element.style.transform = 'translateY(0)';
+      }, 100 * index);
+    });
   });
 </script>
+<!-- 
+<style>
+  /* Style personnalisé pour le select */
+  select {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m6 8 4 4 4-4'/%3e%3c/svg%3e");
+    background-position: right 0.5rem center;
+    background-repeat: no-repeat;
+    background-size: 1.5em 1.5em;
+    padding-right: 2.5rem;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  /* Style pour la notification */
+  .fixed {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+
+  .fixed.translate-x-0 {
+    transform: translateX(0);
+    opacity: 1;
+  }
+</style> -->
 
 @endslot
 @end
