@@ -664,8 +664,7 @@ ${email}
   function showNotification(message, type) {
     // Création de la notification
     const notification = document.createElement('div');
-    notification.className = `fixed top-4 right-4 z-50 px-6 py-4 rounded-lg shadow-xl transform transition-all duration-300 ${type === 'error' ? 'bg-red-500 text-white' : 'bg-green-500 text-white'
-      }`;
+    notification.className = `notification top-4 right-4 z-50 px-6 py-4 rounded-lg shadow-xl transform transition-all duration-300 ${type === 'error' ? 'bg-red-500 text-white' : 'bg-green-500 text-white'}`;
     notification.textContent = message;
 
     document.body.appendChild(notification);
@@ -699,7 +698,7 @@ ${email}
     });
   });
 </script>
-<!-- 
+
 <style>
   /* Style personnalisé pour le select */
   select {
@@ -712,17 +711,17 @@ ${email}
     print-color-adjust: exact;
   }
 
-  /* Style pour la notification */
-  .fixed {
+  /* Style pour la notification - CHANGE fixed EN notification */
+  .notification {
     transform: translateX(100%);
     opacity: 0;
   }
 
-  .fixed.translate-x-0 {
+  .notification.translate-x-0 {
     transform: translateX(0);
     opacity: 1;
   }
-</style> -->
+</style>
 
 @endslot
 @end

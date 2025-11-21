@@ -13,6 +13,16 @@ function applyTheme(theme) {
   }
 }
 
+// Fermer le menu mobile quand on clique sur un lien
+document.querySelectorAll('.mobile-menu-link').forEach((link) => {
+  link.addEventListener('click', () => {
+    const mobileMenu = document.getElementById('mobileMenu')
+    if (mobileMenu) {
+      mobileMenu.classList.add('hidden')
+    }
+  })
+})
+
 // Vérifier la préférence utilisateur au chargement
 function initTheme() {
   // Par défaut, on met en light pour voir le fond blanc
