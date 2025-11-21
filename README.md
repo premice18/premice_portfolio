@@ -57,21 +57,25 @@ Chaque technologie est mise en valeur avec des icônes et des cartes de compéte
 
 1. Cloner le dépôt :
 
-`````bash
+```bash
 git clone https://github.com/KomboziPremice/portfolio.git
 cd portfolio
+```
 
 2. Installer les dépendances (si Vite ou Node.js utilisé) :
 
-````bash
+```bash
 
 npm install
 
+```
+
 3. Lancer le developpement :
 
-````bash
+```bash
 npm run dev
 
+```
 
 ##📌📝 Contact
 
@@ -83,4 +87,6 @@ LinkedIn : https://www.linkedin.com/in/kombozipremice/
 
 Twitter : https://twitter.com/KomboziPremice
 
-`````
+```
+
+```
