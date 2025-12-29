@@ -360,13 +360,6 @@
       <div
         class="bg-white dark:bg-dark-300 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 relative">
 
-        <!-- Badge "Nouveau" -->
-        <div class="absolute top-4 right-4 z-10">
-          <span
-            class="px-3 py-1 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-full text-sm font-bold animate-pulse">
-            ✨ Nouveau !
-          </span>
-        </div>
 
         <!-- Badge "En développement" -->
         <div class="absolute top-4 left-4 z-10">
@@ -430,7 +423,86 @@
           </div>
         </div>
       </div>
+      <!-- Carte Projet 5 - YEKOLA AI -->
+      <div
+        class="bg-white dark:bg-dark-300 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 relative">
 
+        <!-- Badge "Nouveau" -->
+        <div class="absolute top-4 right-4 z-10">
+          <span
+            class="px-3 py-1 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-full text-sm font-bold animate-pulse">
+            ✨ Nouveau !
+          </span>
+        </div>
+
+        <!-- Badge "En développement" -->
+        <div class="absolute top-4 left-4 z-10">
+          <span class="px-3 py-1 bg-yellow-400 text-gray-900 rounded-full text-sm font-bold animate-pulse">
+            🚧 En construction
+          </span>
+        </div>
+
+        <!-- Image du projet -->
+        <div
+          class="h-80 bg-gradient-to-br from-cyan-100 to-blue-100 dark:from-cyan-900 dark:to-blue-900 flex items-center justify-center overflow-hidden relative group">
+          <div
+            class="absolute inset-0 bg-black bg-opacity-10 group-hover:bg-opacity-5 transition-all duration-300 rounded-md">
+          </div>
+          <img src="/resources/views/images/yekola-ai-img.png" alt="Aperçu du projet YEKOLA AI"
+            class="h-full object-contain transition-transform duration-300 group-hover:scale-110 rounded-md">
+
+          <!-- Effet de brillance au survol -->
+          <div
+            class="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -skew-x-12 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000">
+          </div>
+        </div>
+
+        <!-- Contenu -->
+        <div class="p-6">
+          <h3 class="text-xl font-bold mb-2 flex items-center gap-2">
+            YEKOLA AI
+            <span class="text-lg">🧠</span>
+          </h3>
+          <p class="text-gray-600 dark:text-gray-300 mb-4">
+            Assistant conversationnel éducatif alimenté par Mistral AI, générant des cours structurés dans n'importe
+            quel
+            domaine.
+            <span class="block mt-1 text-sm italic text-cyan-600 dark:text-cyan-400">
+              (En développement - Démo disponible via le lien)
+            </span>
+          </p>
+
+          <div class="mb-3">
+            <p class="text-sm text-cyan-600 dark:text-cyan-400 italic">
+              🧠 Mon assistant éducatif Yekola, propulsé par l'API Mistral !
+            </p>
+          </div>
+
+          <div class="flex flex-wrap gap-2 mb-4">
+            <span
+              class="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full text-sm">AdonisJS</span>
+            <span
+              class="px-3 py-1 bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 rounded-full text-sm">PostgreSQL</span>
+            <span
+              class="px-3 py-1 bg-amber-100 dark:bg-amber-900 text-amber-800 dark:text-amber-200 rounded-full text-sm">Mistral
+              AI</span>
+            <span
+              class="px-3 py-1 bg-cyan-100 dark:bg-cyan-900 text-cyan-800 dark:text-cyan-200 rounded-full text-sm">Éducation</span>
+          </div>
+
+          <div class="flex gap-3">
+            <a href="https://yekola.onrender.com/" target="_blank" rel="noopener noreferrer"
+              class="flex-1 text-center px-4 py-2 bg-accent-purple text-white rounded-lg hover:bg-purple-600 font-medium transition-colors duration-200 text-sm">
+              🌐 Voir le Rendu
+            </a>
+            <a href="#"
+              class="flex-1 text-center px-4 py-2 border border-accent-purple text-accent-purple rounded-lg hover:bg-purple-50 dark:hover:bg-purple-900/20 font-medium transition-colors duration-200 text-sm"
+              onclick="event.preventDefault(); alert('Code source disponible sur demande ! 🔐');">
+              📁 Code Source
+            </a>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -544,13 +616,13 @@
           <label for="name" class="block text-sm font-medium">Votre nom *</label>
           <input type="text" id="name" name="name" required
             class="w-full px-4 py-3 rounded-lg bg-white dark:bg-dark-400 border border-gray-300 dark:border-dark-200 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-200 placeholder-gray-400"
-            placeholder="John Doe">
+            placeholder="Jacquie Smith">
         </div>
         <div class="space-y-2">
           <label for="email" class="block text-sm font-medium">Votre email *</label>
           <input type="email" id="email" name="email" required
             class="w-full px-4 py-3 rounded-lg bg-white dark:bg-dark-400 border border-gray-300 dark:border-dark-200 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-200 placeholder-gray-400"
-            placeholder="john@exemple.com">
+            placeholder="jacquies@gmail.com">
         </div>
       </div>
 
