@@ -62,12 +62,16 @@ if (mobileMenuButton && mobileMenu) {
   })
 }
 
-// Navigation fluide
+// Navigation fluide (uniquement si la cible existe)
 document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
   anchor.addEventListener('click', function (e) {
-    e.preventDefault()
-    const target = document.querySelector(this.getAttribute('href'))
+    const href = this.getAttribute('href')
+    if (!href || href === '#') {
+      return
+    }
+    const target = document.querySelector(href)
     if (target) {
+      e.preventDefault()
       target.scrollIntoView({
         behavior: 'smooth',
         block: 'start',
@@ -98,29 +102,6 @@ document.querySelectorAll('.skill-card, .project-card').forEach((el) => {
   el.style.transition = 'opacity 0.6s ease, transform 0.6s ease'
   observer.observe(el)
 })
-
-// Gestion du formulaire de contact
-const contactForm = document.querySelector('form')
-if (contactForm) {
-  contactForm.addEventListener('submit', async (e) => {
-    e.preventDefault()
-
-    // Simulation d'envoi
-    const submitButton = contactForm.querySelector('button[type="submit"]')
-    const originalText = submitButton.textContent
-
-    submitButton.textContent = 'Envoi en cours...'
-    submitButton.disabled = true
-
-    // Simuler un délai d'envoi
-    await new Promise((resolve) => setTimeout(resolve, 2000))
-
-    alert('Message envoyé avec succès !')
-    contactForm.reset()
-    submitButton.textContent = originalText
-    submitButton.disabled = false
-  })
-}
 
 // Fermer le menu mobile en cliquant à l'extérieur
 document.addEventListener('click', (e) => {

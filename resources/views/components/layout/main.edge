@@ -7,7 +7,7 @@
     <title>{{ $title ?? 'KOMBOZI Prémice' }}</title>
 
     <!-- Vite CSS -->
-    @vite(['resources/css/app.css'])
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
 
     <!-- Google Fonts -->
     <link
@@ -19,11 +19,8 @@
         integrity="sha512-papNM3n1cIhLh6i4j3jD4aOcz2l3WmM1d3nJIRtD3Hg7fV7sckFZgW6Gya0iS0DRL77cHfOkK0aYkKZp0Zr+lw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <!-- Tailwind (via CDN for fallback) -->
+    <!-- Tailwind (via CDN) -->
     <script src="https://cdn.tailwindcss.com"></script>
-
-    <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
 
     <!-- Tailwind Config -->
     <script>
@@ -60,51 +57,9 @@
         }
     </script>
 
-    <!-- Custom Styles -->
-    <style>
-        @keyframes float {
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
 
-            0%,
-            100% {
-                transform: translateY(0);
-            }
-
-            50% {
-                transform: translateY(-20px);
-            }
-        }
-
-        @keyframes glow {
-            from {
-                opacity: 0.5;
-                transform: scale(1);
-            }
-
-            to {
-                opacity: 1;
-                transform: scale(1.1);
-            }
-        }
-
-        .line-clamp-3 {
-            display: -webkit-box;
-            -webkit-line-clamp: 3;
-            -webkit-box-orient: vertical;
-            overflow: hidden;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            background-color: white;
-        }
-
-        .dark body {
-            background-color: #020617;
-        }
-    </style>
 </head>
 
 <body class="bg-white dark:bg-dark-500 text-gray-800 dark:text-gray-200 transition-colors duration-300 font-sans">
@@ -119,7 +74,6 @@
     <!-- Footer -->
     @!component('components/footer')
 
-    <script src="/resources/js/app.js" defer></script>
 </body>
 
 </html>
