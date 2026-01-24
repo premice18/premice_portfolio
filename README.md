@@ -116,15 +116,22 @@ portfolio/
    npm install
    ```
 
-3. **Démarrer le serveur de développement**
+3. **Configurer l'environnement**
+
+   ```bash
+   cp .env.example .env
+   # Modifier le fichier .env avec vos configurations
+   ```
+
+4. **Démarrer le serveur de développement**
 
    ```bash
    npm run dev
    ```
 
-4. **Ouvrir votre navigateur**
+5. **Ouvrir votre navigateur**
    ```
-   http://localhost:5173
+   http://localhost:3333
    ```
 
 ### 🏗️ Build de Production
